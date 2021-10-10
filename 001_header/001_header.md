@@ -1,6 +1,6 @@
 # Example 001 Header
 
-A simple file containing  a bootable header.
+A simple script containing a bootable header.
 
 ## Description
 
