@@ -1,6 +1,6 @@
 # learning-intel-x86-assembly
 
-A repository to keep my files while learning Intel x86 assembly. To do this, I an using the [NASM](https://www.nasm.us/) assembler, which uses the standard Intel syntax for writing x86 assembly code. The examples are ordered chronologically by the time they were added, starting with 001. This means that the examples are not necesarily ordered by complexity. Each example includes a small boot loader header, so that they are identified as bootable and can mounted and run using the [qemu](https://www.qemu.org/) emulator.
+A repository to keep my files while learning Intel x86 assembly. I am using the [NASM](https://www.nasm.us/) assembler, which uses the standard Intel syntax for writing x86 assembly code. The examples are ordered chronologically by the time they were added, starting with 001. This means that the examples are not necesarily ordered by complexity. Each example includes a small boot loader header, so that they are identified as bootable and can mounted and run using the [qemu](https://www.qemu.org/) emulator.
 
 The isolated header can be found in the first example, [001_header](001_header/001_header.md).
 
