@@ -4,6 +4,8 @@ A repository to keep my files while learning Intel x86 assembly. I am using the 
 
 The isolated header can be found in the first example, [001_header](001_header/001_header.md).
 
+I will be adding a markdown file for each example, but this is more as a way for me to solidify what I am learning then something worth reading. Feel free to look through them though.
+
 ## DISCLAIMER
 
 _This repository serves as a learning experience for me and will contain errors, missconceptions, misinformation, unoptimized code etc. Feel free to create an issue, PR or discussion with improvements._
@@ -30,3 +32,4 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 ## Examples
 
 * [001_header](001_header/001_header.md)
+* [002_write_to_terminal](002_write_to_terminal/002_write_to_terminal.md)
