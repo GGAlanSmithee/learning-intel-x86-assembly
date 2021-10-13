@@ -20,16 +20,17 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 
 ## Manuals
 
-* [NASM manual](https://nasm.us/doc/nasmdoci.html)
-* [Intel x86 developer manuals](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
+- [NASM manual](https://nasm.us/doc/nasmdoci.html)
+- [Intel x86 developer manuals](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
 
 ## Additional resources
 
-* https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture
-* [x86 registers](https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html)
-* [x86 interrupts](https://stanislavs.org/helppc/int_table.html)
+- https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture
+- [x86 registers](https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html)
+- [x86 interrupts](https://stanislavs.org/helppc/int_table.html)
 
 ## Examples
 
-* [001_header](001_header/001_header.md)
-* [002_write_to_terminal](002_write_to_terminal/002_write_to_terminal.md)
+- [001_header](001_header/001_header.md)
+- [002_write_to_terminal](002_write_to_terminal/002_write_to_terminal.md)
+- [003_labels](003_labels/003_labels.md)

@@ -6,7 +6,7 @@ Prints the letter 'A' to the terminal
 
 This program uses a software interrupt to let the processor know there is something it must do. In this specific example, that is to write a character to the terminal, which corresponds to interrupt 10.E. This interrupt is a part of the INT _n_ (software interrupt) instruction, which is one of the instructions that allows a program to call an interrupt. See volume 1 sections 6.5.4 and 7.3.8.4 in the [manual](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
 
-The intel x86 manual does not cover available software interrupts as it is a part of the BIOS instruction set as far as I understand it. [This page](https://stanislavs.org/helppc/int_table.html) covers them though. Drilling down we see that [interrupt 10](https://stanislavs.org/helppc/int_10.html) (video BIOS service), and more specifically [interrupt 10.E](https://stanislavs.org/helppc/int_10-e.html) (set video mode) is the one used in this example.
+The intel x86 manual does not cover available software interrupts as it is a part of the BIOS instruction set as far as I understand it. [This page](https://stanislavs.org/helppc/int_table.html) covers them though. Drilling down we see that [interrupt 10](https://stanislavs.org/helppc/int_10.html) (Video BIOS Service), and more specifically [interrupt 10.E](https://stanislavs.org/helppc/int_10-e.html) (Write Text in Teletype Mode) is the one used in this example.
 
 On a high level, a software interrupt works like this:
 
