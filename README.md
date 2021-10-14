@@ -1,6 +1,6 @@
 # learning-intel-x86-assembly
 
-A repository to keep my files while learning Intel x86 assembly. I am using the [NASM](https://www.nasm.us/) assembler, which uses the standard Intel syntax for writing x86 assembly code. The examples are ordered chronologically by the time they were added, starting with 001. This means that the examples are not necesarily ordered by complexity. Each example includes a small boot loader header, so that they are identified as bootable and can mounted and run using the [qemu](https://www.qemu.org/) emulator.
+A repository to keep my files while learning Intel x86 assembly. I am using the [NASM] assembler, which uses the standard Intel syntax for writing x86 assembly code. The examples are ordered chronologically by the time they were added, starting with 001. This means that the examples are not necesarily ordered by complexity. Each example includes a small boot loader header, so that they are identified as bootable and can mounted and run using the [qemu] emulator.
 
 The isolated header can be found in the first example, [001_header](001_header/001_header.md).
 
@@ -12,22 +12,22 @@ _This repository serves as a learning experience for me and will contain errors,
 
 ## Instructions
 
-Before running an example you need to make sure that the two executables `nasm` and `qemu` are available in the system path. This can be done in a variaty of ways, depending on your operating system. The way I did it was to download [SASM](https://dman95.github.io/SASM/english.html) (which is great for debugging assembly) and [qemu](https://www.qemu.org/). I then made sure the (windows) environment variables path included their respective directories.
+Before running an example you need to make sure that the two executables `nasm` and `qemu` are available in the system path. This can be done in a variaty of ways, depending on your operating system. The way I did it was to download [SASM] (which is great for debugging assembly) and [qemu]. I then made sure the (windows) environment variables path included their respective directories.
 
-To run an example, simply type `run.sh {example}`, for example `run.sh 001_header`. A shell script, `.sh`, is a way to run scripts on linux, but you can execute it on windows by, for example, installing the [git bash](https://git-scm.com/downloads), or by using the [Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install).
+To run an example, simply type `run.sh {example}`, for example `run.sh 001_header`. A shell script, `.sh`, is a way to run scripts on linux, but you can execute it on windows by, for example, installing the [git bash][bash], or by using the [Windows subsystem for Linux][wsl].
 
 If you wish to create a new example, the `create_example.sh` script will help you get set up. Simply call it with `./crete_example.sh {name_of_example}` which will add a new folder with an, othervise empty, but bootable script and a readme file.
 
 ## Manuals
 
-- [NasmManual]
-- [IntelManual]
+- [NASM manual][NasmManual]
+- [Intel manual][IntelManual]
 
 ## Additional resources
 
-- [x86architecture]
-- [x86registers]
-- [x86interrupts]
+- [x86 architecture][x86architecture]
+- [x86 registers][x86registers]
+- [x86 interrupts][x86interrupts]
 
 ## Examples
 
@@ -65,12 +65,15 @@ From real-address mode, we can enter protected mode. This is done by setting up 
 
 - The names x86 and IA-32 are used interchangeably by Intel
 
-## References
-
-- [NasmManual] <https://nasm.us/doc/nasmdoci.html> "NASM Manual"
-- [IntelManual] <https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-1-2a-2b-2c-2d-3a-3b-3c-3d-and-4.html> "Intel x86 Developer Manual"
-- [RealMode] <https://wiki.osdev.org/Real_Mode> "Real Mode"
-- [ProtectedMode] <https://en.wikipedia.org/wiki/Protected_mode> "Protected Mode"
-- [x86architecture] <https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture> "x86 architecture"
-- [x86registers] <https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html> "x86 registers"
-- [x86interrupts] <https://stanislavs.org/helppc/int_table.html>  "x86 interrupts"
+[bash]: https://git-scm.com/downloads
+[wsl]: https://docs.microsoft.com/en-us/windows/wsl/install
+[qemu]: https://www.qemu.org/
+[SASM]: https://dman95.github.io/SASM/english.html
+[NASM]: https://nasm.us
+[NasmManual]: https://nasm.us/doc/nasmdoci.html
+[IntelManual]: https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-1-2a-2b-2c-2d-3a-3b-3c-3d-and-4.html
+[RealMode]: https://wiki.osdev.org/Real_Mode
+[ProtectedMode]: https://en.wikipedia.org/wiki/Protected_mode
+[x86architecture]: https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture
+[x86registers]: https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html
+[x86interrupts]: https://stanislavs.org/helppc/int_table.html>
