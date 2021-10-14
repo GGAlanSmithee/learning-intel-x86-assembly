@@ -1,4 +1,4 @@
-BITS 32                 ; specify target processor mode as 32 bits (https://nasm.us/doc/nasmdoc7.html)
+BITS 16                 ; specify target processor mode as 16 bits (https://nasm.us/doc/nasmdoc7.html)
 ORG 0x7c00              ; specify base address, where the bootloader should be loaded into memory
 
 mov ah, 0x0e            ; set the ah register to 0x0e (select the 'Write character' function)

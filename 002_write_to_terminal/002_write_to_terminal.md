@@ -18,9 +18,13 @@ Looking at the doc for this interrupt, it expects the register `ah` to be set to
 
 ## Notes
 
-### Registers
+### Segment Registers
 
-The x86 architecture defines a couple of registers (space in memory) that are built in to the processor. While these can be used as a general store of data (that are more performant than the custom defined `dx` registers), they are also used by the processor as a way of passing data between the BIOS and the processor. read more [here](https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html)
+The segment registers that are used to calculate the physical address of memory being accessed are always 16 bits wide. This is true for all processor modes.
+
+### General Registers
+
+The x86 architecture defines a couple of registers (space in memory) that are built in to the processor, called general registers. While these can be used as a general store of data (that are more performant than the custom defined `dx` registers), they are also used by the processor as a way of passing data between the BIOS and the processor. read more [here](https://www.eecg.utoronto.ca/~amza/www.mindsec.com/files/x86regs.html)
 
 A register (for 32 bit x86) is 32 bits wide. The "general registers" are named `EAX`, `EBX`, `ECX`, `EDX` and each one of them are also segmented into 16 and 8 bits sub parts. These sub parts follows a naming convention that is as
 
