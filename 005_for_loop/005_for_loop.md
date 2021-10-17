@@ -12,7 +12,7 @@ As you can see, `cmp` is used to check if the loop should be terminated. In this
 
 ### EFLAGS register
 
-As we talked about in a previous example, the x86 processor architecture includes a couple of general purpose registers, but it also defines a register, called the EFLAGS register, for storing flags. See vol. 1, ch. 3.4.3 in the [intel manual][intel]. On a 32-bit system, the register is 32-bit wide and the bits in it is seperated into three different types; status flags, control flags and system flags. Some of the positions are empty for backward and forward compatability reasons. The flags that are of most interest in this case are the status flags, since they are the ones that indicates the result of an arithmetic instruction. These bits are:
+As we talked about in a previous example, the x86 processor architecture includes a couple of general purpose registers, but it also defines a register for storing flags called the EFLAGS register. See vol. 1, ch. 3.4.3 in the [intel manual][intel]. On a 32-bit system, the register is 32-bit wide and the bits in it is seperated into three different types; status flags, control flags and system flags. Some of the positions are empty for backward and forward compatability reasons. The flags that are of most interest in this case are the status flags, since they are the ones that indicates the result of an arithmetic instruction. These bits are:
 
 | Bit           | Function |
 | :---          | :---   |
