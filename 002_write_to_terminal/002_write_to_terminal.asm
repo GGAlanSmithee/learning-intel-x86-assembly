@@ -6,4 +6,4 @@ mov al, 'A'             ; move the value 'A' into the al register (character to 
 int 0x10                ; call interrupt 10 (video services interrupt)
 
 TIMES 510-($-$$) db 0   ; assure the script is a total of 512 bytes (including magic bytes)
-dw 0xaa55               ; add magic bytes, instructing BIOS that this is bootable
+dw 0xaa55               ; add magic bytes, instructing the BIOS that this is bootable
