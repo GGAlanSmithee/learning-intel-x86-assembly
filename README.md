@@ -46,7 +46,6 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - GDT
 - IDT
 - Protected mode
-- Procedure calls / stack
 
 ## Notes
 
