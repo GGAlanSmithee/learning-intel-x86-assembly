@@ -42,6 +42,7 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 
 - non blocking keyboard input (0x16, AH = 1)
 - Indexes and pointers
+- calculator
 - GDT
 - IDT
 - Protected mode
