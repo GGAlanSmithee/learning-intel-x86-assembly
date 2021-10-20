@@ -37,6 +37,7 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - [003_labels](003_labels/003_labels.md)
 - [004_jmp](004_jmp/004_jmp.md)
 - [005_for_loop](005_for_loop/005_for_loop.md)
+- [006_call_procedure](006_call_procedure/006_call_procedure.md)
 
 ## Ideas for future examples
 
@@ -46,6 +47,9 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - GDT
 - IDT
 - Protected mode
+- Passing parameters to procedure
+- structs and passing structs by reference
+- local labels
 
 ## Notes
 
