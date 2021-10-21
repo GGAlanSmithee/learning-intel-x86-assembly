@@ -1,71 +1,31 @@
 BITS 16                 ; specify target processor mode as 16 bits (https://nasm.us/doc/nasmdoc7.html)
 ORG 0x7c00              ; specify base address, where the bootloader should be loaded into memory
 
-argument_1: dw '1'
-argument_2: dw 'Hello', '\0'
-argument_3: dw 42
+argument_1: db '1'
+argument_2: dw 'A'
+argument_3: dd 1                ; smiley face
 
-jmp example_1
+mov bl, [argument_1]            ; store address of argument 1 in the bl register
+mov cl, [argument_2]            ; store address of argument 2 in the cl register
+mov dl, [argument_3]            ; store address of argument 3 in the cl register
 
-; ----------------------------- GENERAL PURPOSE REGISTER EXAMPLE -------------------------------------
+call procedure                  ; call the procedure
 
-example_1:
+jmp end                         ; quit example
 
-mov bl, [argument_1]               ; store address of argument 1 in the bl register
-mov cl, [argument_2]               ; store address of argument 2 in the cl register
-mov dl, [argument_3]               ; store address of argument 3 in the cl register
-
-call via_general_purpose_registers ; call the procedure
-
-jmp example_2                      ; go to the next example
-
-via_general_purpose_registers:     ; takes arguments as set in the general-purpose registers and prints them
+procedure:                      ; takes arguments as set in the general-purpose registers and prints them
     mov ah, 0x0e
     mov al, bl
     int 0x10
 
-    mov ah, 0x0e                    ; only print "H", not "Hello", to keep this example simple
+    mov ah, 0x0e
     mov al, cl
     int 0x10
 
-    mov ah, 0x0e                    ; will print '*', not "42", to keep this example simple
+    mov ah, 0x0e
     mov al, dl
     int 0x10
 
-    ret
-
-
-; ---------------------------------- ARGUMENT LIST EXAMPLE -------------------------------------------
-
-example_2:
-
-mov bl, '2'                        ; set the "bl" register to '2'
-
-call via_an_argument_list
-
-jmp example_3                      ; go to the next example
-
-via_an_argument_list:
-    mov ah, 0x0e
-    mov al, bl
-    int 0x10
-    ret
-
-
-; -------------------------------------- STACK EXAMPLE -----------------------------------------------
-
-example_3:
-
-mov bl, '3'                        ; set the "bl" register to '3'
-
-call via_the_stack
-
-jmp end
-
-via_the_stack:
-    mov ah, 0x0e
-    mov al, bl
-    int 0x10
     ret
 
 end:

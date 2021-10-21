@@ -10,17 +10,15 @@ There are three ways to pass parameters in the x86 architecture;
 1. in an argument list
 1. on the stack
 
-In this example we explore each of these methods. see vol. 1, ch. 6.4.3 in the [Intel Manual][intel] for more info
+In this example we explore the first, and most simple, method. see vol. 1, ch. 6.4.3 in the [Intel Manual][intel] for more info
 
 ## Notes
 
 ### Pass arguments using general-purpose registers
 
-The state of the general purpose registers are not saved on procedure calls. This means you can pass (in and out) up to six parameters by copying them into these registers before calling into, or returning from, a procedure.
+The state of the general purpose registers are not saved on procedure calls. This means you can pass up to six parameters (both in and out) by copying them into these registers before calling into, or returning from, a procedure.
 
-### Pass arguments using an argument list
-
-### Pass arguments using the stack
+This is affectively passing arguments as references, since the only things being "passed" (copied to the general registers) are the addresses of the arguments and not the argument data itself. This is obvious in the example, where we define bytes of three different sizes, (db (byte) = 8 bits, dw (word) = 16 bits and dd (double) = 32 bits). It is the addresses (the low 8 bits) that is copied into the `bl` register, which is only 8 bit wide.
 
 ### Data types
 
@@ -34,7 +32,7 @@ When passing arguments to a procedure it is important to keep track of how large
 | Quadword        | 2 Doubleword | 8     | 64   | `[High Doubleword \| Low Doubleword]` |
 | Double Quadword | 2 Quadword   | 16    | 128  | `[High Quadword \| Low Quadword]`     |
 
-For each of the data types, the low byte (bits 0 - 7) is stored in the lowest address in memory, which is the address that points to the start of the data.
+For each of the data types, the low byte (bits 0 - 7) is stored in the lowest address in memory, which is the address that points to the start of the data. This is more important when passing complex data structures, which we will look at in a later example.
 
 ### Other thoughts
 
