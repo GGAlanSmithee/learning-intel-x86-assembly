@@ -1,13 +1,9 @@
 BITS 16                 ; specify target processor mode as 16 bits (https://nasm.us/doc/nasmdoc7.html)
 ORG 0x7c00              ; specify base address, where the bootloader should be loaded into memory
 
-argument_1: db '1'
-argument_2: dw 'A'
-argument_3: dd 1                ; smiley face
-
-mov bl, [argument_1]            ; store address of argument 1 in the bl register
-mov cl, [argument_2]            ; store address of argument 2 in the cl register
-mov dl, [argument_3]            ; store address of argument 3 in the cl register
+mov bl, '1'
+mov cl, 'A'
+mov dl, 1                       ; smiley face
 
 call procedure                  ; call the procedure
 
