@@ -52,6 +52,7 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - structs and passing structs by reference
 - local labels
 - data structures
+- local variables 
 
 ## Notes
 
