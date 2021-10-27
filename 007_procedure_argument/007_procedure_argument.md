@@ -18,7 +18,7 @@ In this example we explore the first, and most simple, method. see vol. 1, ch. 6
 
 The state of the general purpose registers are not saved on procedure calls. This means you can pass up to six parameters (both in and out) by setting these registers before calling into, or returning from, a procedure.
 
-This is passing the arguments as values, since it is the registers themselves that is being set. Ofcourse, those values could be the addresses of other memory segments, but we will look at that in another example. If it is indeed just the registers themselves that is the holder of the value being passed, that puts a limitation on those registers to their max size, which would be one byte each in the example-
+This is passing the arguments as values, since it is the registers themselves that is being set. Of course, those values could be the addresses of other memory segments, but we will look at that in another example. If it is indeed just the registers themselves that is the holder of the value being passed, that puts a limitation on those registers to their max size, which would be one byte each in the example-
 
 Passing arguments by storing them in general registers without any further book-keeping becomes problematic when we have calls to nested functions with their own set of arguments. To handle cases like this we need to use the stack, which we will look at in the next example.
 

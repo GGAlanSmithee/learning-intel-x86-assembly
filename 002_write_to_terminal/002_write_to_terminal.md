@@ -20,9 +20,9 @@ Looking at the doc for this interrupt, it expects the register `ah` to be set to
 
 ### Segment Registers
 
-The segment registers that are used to calculate the physical address of memory being accessed are always 16 bits wide. This is true for all processor modes.
+The segment registers that are used to calculate the physical address of memory being accessed are always 16 bits wide. This is true for all processor modes. These are the `cs`, `ds`, `ss`, `es`, `fs` and `gs` registers and they are each associated with one of three types of storage: code, data or stack. How these are used depends on your memory model. read more in vol. 1, ch. 3.4.2 of the [intel manual]
 
-### General Registers
+### General-Purpose Registers
 
 The x86 architecture defines a couple of registers (space in memory) that are built in to the processor, called general registers. While these can be used as a general store of data (that are more performant than the custom defined `dx` registers), they are also used by the processor as a way of passing data between the BIOS and the processor. read more [here][x86 registers]
 
@@ -52,7 +52,7 @@ An interrupt is a asynchronous event that is usually triggered by an I/O event s
 
 A bit is a number that can be either 0 or 1. At the lowest level (object code) all software is represented as binary. This is because a bit is a digital representation of the underlying hardware component operations, such as logic gates, that can be either on (1) or off (0). [read more][binary]
 
-A binary number contains one or more bits, grouped as bytes (8 bits), which is referred to as "segmented addressing" or more specifically as "byte adressing". In a binary integer (whole number) the most significant bit (MSB) is to the left and the least significant bit (LSB) is to the right. That is, the number is changed to a higher order of magnitudes as you change bits further to the left.
+A binary number contains one or more bits, grouped as bytes (8 bits), which is referred to as "segmented addressing" or more specifically as "byte addressing". In a binary integer (whole number) the most significant bit (MSB) is to the left and the least significant bit (LSB) is to the right. That is, the number is changed to a higher order of magnitudes as you change bits further to the left.
 
 in the Intel x86 architecture [manual][intel manual], vol. 1, ch. 1.3.3, they represent binary numbers as a string of digits followed by a `B`, ie. `1010B`
 
@@ -68,7 +68,7 @@ in the Intel x86 architecture [manual][intel manual], vol. 1, ch. 1.3.3, they re
 
 ### hexadecimal numbers
 
-A hexadecimal number is a conveniant way to represent a binary number. A hexadecimal number has a base of 16 (0 to 9 + A to F), which allows us to represent 8 bits (a byte) in just 2 hex digits. This makes it much easier to remember and to communicate. In x86 assembly, memory addresses are written as hexadecimal numbers.
+A hexadecimal number is a convenient way to represent a binary number. A hexadecimal number has a base of 16 (0 to 9 + A to F), which allows us to represent 8 bits (a byte) in just 2 hex digits. This makes it much easier to remember and to communicate. In x86 assembly, memory addresses are written as hexadecimal numbers.
 
 The most common notation for writing a hex is with a leading `0x`, however, in the Intel x86 architecture [manual][intel manual], vol. 1, ch. 1.3.3, they refer to a hex number as a string of digits followed by a `H`, for example `FF0000H`.
 

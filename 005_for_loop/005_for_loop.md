@@ -12,7 +12,7 @@ As you can see, `cmp` is used to check if the loop should be terminated. In this
 
 ### EFLAGS register
 
-As we talked about in a previous example, the x86 processor architecture includes a couple of general purpose registers, but it also defines a register for storing flags called the EFLAGS register. See vol. 1, ch. 3.4.3 in the [intel manual][intel]. On a 32-bit system, the register is 32-bit wide and the bits in it is seperated into three different types; status flags, control flags and system flags. Some of the positions are empty for backward and forward compatability reasons. The flags that are of most interest in this case are the status flags, since they are the ones that indicates the result of an arithmetic instruction. These bits are:
+As we talked about in a previous example, the x86 processor architecture includes a couple of general purpose registers, but it also defines a register for storing flags called the EFLAGS register. See vol. 1, ch. 3.4.3 in the [intel manual][intel]. On a 32-bit system, the register is 32-bit wide and the bits in it is separated into three different types; status flags, control flags and system flags. Some of the positions are empty for backward and forward compatibility reasons. The flags that are of most interest in this case are the status flags, since they are the ones that indicates the result of an arithmetic instruction. These bits are:
 
 | Bit           | Function |
 | :---          | :---   |
@@ -25,7 +25,7 @@ As we talked about in a previous example, the x86 processor architecture include
 
 ### cmp
 
-The reason why the result of an arithmetic instruciton is of interest in this example is that a `cmp` instruction is really a `sub` (subtraction) instruction, with the difference that with a `cmp`, the result is discarded. As you can see in the above table, when the `cmp` operation is performed, depending on the result, certain flags will be set to certain values. As a matter of fact, all of the above flags are affected by a `cmp` instruction. See vol. 1 app. A of the [intel manual][intel].
+The reason why the result of an arithmetic instruction is of interest in this example is that a `cmp` instruction is really a `sub` (subtraction) instruction, with the difference that with a `cmp`, the result is discarded. As you can see in the above table, when the `cmp` operation is performed, depending on the result, certain flags will be set to certain values. As a matter of fact, all of the above flags are affected by a `cmp` instruction. See vol. 1 app. A of the [intel manual][intel].
 
 Knowing the above, if a comparison operation between two values equals true, then the `ZF` flag will be set to 0, and if not, it will be set to 1. In our case, we are checking for less than, which is indicated by the `SF` flag. If the result is negative (less than), then the `SF` flag will be set to 1. Looking at the manual, the conditional check also takes the `OF` flag into account, to check for overflows, which makes a lot of sense. See vol. 1 app. B of the [intel manual][intel] for a really good table on condition codes.
 
@@ -37,7 +37,7 @@ See the [jmp quick reference] for more info.
 
 ### `inc` and `add`
 
-This example also includes two additional general instructions, `inc` and `add`. I won't go into detail of how they work, but it very much has to do with performing arethmetic operations, storing the resuts, and setting flags accordingly. `inc` stands for increment (AKA `++` in C) and `add` is ofcourse an addition.
+This example also includes two additional general instructions, `inc` and `add`. I won't go into detail of how they work, but it very much has to do with performing arithmetic operations, storing the results, and setting flags accordingly. `inc` stands for increment (AKA `++` in C) and `add` is of course an addition.
 
 ## Additional thoughts
 

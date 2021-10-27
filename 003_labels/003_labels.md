@@ -6,7 +6,7 @@ Declares labels
 
 Declares the labels `val` and `print`. The first which points to a memory address that holds the value 'L' and the second that points to a memory address that holds a piece of code that prints `val` to the screen.
 
-As you can see in the example, it is possible to dereference a label to get the underlying value, which is done using angle-brackets `[val]`. This opens the door for things such as pointer aritchmetics, which we will explore in a later example.
+As you can see in the example, it is possible to dereference a label to get the underlying value, which is done using angle-brackets `[val]`. This opens the door for things such as pointer arithmetics, which we will explore in a later example.
 
 When declaring a one-liner label, such as `val`, it is possible to skip the `:`, like `val db 'L'`. I would not recommend this, since it makes the code less clear and opens up for errors if you were to add additional lines.
 
