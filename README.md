@@ -39,6 +39,8 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - [005_for_loop](005_for_loop/005_for_loop.md)
 - [006_call_procedure](006_call_procedure/006_call_procedure.md)
 - [007_procedure_argument](007_procedure_argument/007_procedure_argument.md)
+- [008_procedure_argument_2](008_procedure_argument_2/008_procedure_argument_2.md)
+- [009_procedure_argument_3](009_procedure_argument_3/009_procedure_argument_3.md)
 
 ## Ideas for future examples
 
@@ -53,6 +55,8 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - local labels
 - data structures
 - local variables 
+- section
+- data and code sections
 
 ## Notes
 
