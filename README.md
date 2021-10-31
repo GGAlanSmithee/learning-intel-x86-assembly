@@ -40,7 +40,7 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - [006_call_procedure](006_call_procedure/006_call_procedure.md)
 - [007_procedure_argument](007_procedure_argument/007_procedure_argument.md)
 - [008_procedure_argument_2](008_procedure_argument_2/008_procedure_argument_2.md)
-- [009_procedure_argument_3](009_procedure_argument_3/009_procedure_argument_3.md)
+- [009_cdecl](009_cdecl/009_cdecl.md)
 
 ## Ideas for future examples
 
@@ -57,6 +57,7 @@ If you wish to create a new example, the `create_example.sh` script will help yo
 - local variables 
 - section
 - data and code sections
+- calling conventions: cdecl, syscall, optlink
 
 ## Notes
 
